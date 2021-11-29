@@ -36,6 +36,6 @@ export class AppController {
 
   @Get()
   test() {
-    return "connecting test";
+    return "오늘 호이 호이!!!!!";
   }
 }
