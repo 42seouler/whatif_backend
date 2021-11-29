@@ -15,21 +15,27 @@ import { RolesGuard } from './auth/strategies/roles.guard';
 import { ApiTags } from '@nestjs/swagger';
 import { LoginUserDto } from './users/dto/login-user.dto';
 
-@ApiTags('auth')
+@ApiTags("auth")
 @Controller()
 export class AppController {
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService) {
+  }
 
   @UseGuards(LocalAuthGuard)
-  @Post('auth/login')
+  @Post("auth/login")
   async login(@Request() req, @Body() loginUserDto: LoginUserDto) {
     return this.authService.login(req.user);
   }
 
   @Roles(UserRole.ADMIN)
   @UseGuards(JwtAuthGuard, RolesGuard)
-  @Get('profile')
+  @Get("profile")
   getProfile(@Request() req) {
     return req.user;
+  }
+
+  @Get()
+  test() {
+    return "connecting test";
   }
 }

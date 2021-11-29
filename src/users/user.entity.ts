@@ -10,10 +10,10 @@ export class User extends BaseCommonEntity {
   @Column()
   password: string;
 
-  // @Column({
-  //   type: 'enum',
-  //   enum: UserRole,
-  //   default: UserRole.USER,
-  // })
-  // roles: UserRole[];
+  @Column({
+    type: 'enum',
+    enum: UserRole,
+    default: UserRole.USER,
+  })
+  roles: UserRole[];
 }

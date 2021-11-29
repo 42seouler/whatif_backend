@@ -1,6 +1,17 @@
 {
-  "type": "sqlite",
-  "database": "localhost.db",
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "root",
+  "password": "wanted",
+  "database": "wanted",
   "entities": ["dist/**/*.entity{.ts,.js}"],
   "synchronize": true
 }
+
+//docker run --name mysql-db -p 3306:3306 -d \
+//-e MYSQL_ROOT_PASSWORD=root \
+//-e MYSQL_USER=whatif \
+//-e MYSQL_PASSWORD=whatif \
+//-e MYSQL_DATABASE=whatif \
+//-d mysql
