@@ -1,19 +1,10 @@
-FROM node:16
+FROM python:3.7
 
-# Create app directory
-WORKDIR /usr/src/app
+COPY . /app
+WORKDIR /app
 
-# Install app dependencies
-# A wildcard is used to ensure both package.json AND package-lock.json are copied
-# where available (npm@5+)
-COPY package*.json ./
+RUN pip install -r requirements.txt
 
-RUN npm install
-# If you are building your code for production
-# RUN npm ci --only=production
+EXPOSE 80
 
-# Bundle app source
-COPY . .
-
-EXPOSE 3000
-CMD [ "npm", "run", "start" ]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "80"]
