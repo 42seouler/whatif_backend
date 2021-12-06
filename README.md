@@ -81,6 +81,9 @@ class Tag:
 
 [스웨거 접속 URL](http://13.209.42.60:1234/docs#/) 배포, 테스트를 위한 URL 입니다.
 
+![image](https://user-images.githubusercontent.com/77034008/144783773-e5b291db-d55d-4a10-8668-ebfacc39d779.png)
+
+
 ### 회사명에 쿼리가 포함되어 있다면
 
 이 부분을 구현하는데 약간 문제가 있었습니다 SQL의 LIKE를 사용하려고 했는데 제가 사용한 SQLMODEL이란것에선 LIKE를 찾지 못했습니다.
