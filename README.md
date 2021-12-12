@@ -28,6 +28,9 @@
 
 # 요구사항
 
+![image](https://user-images.githubusercontent.com/77034008/145700344-c72b462b-4a9b-4c83-bd48-c8821470f803.png)
+
+
 1. 다국어를 지원하고 ko, en, ja 세가지의 다국어 셋을 지원한다.
 
 ![](https://images.velog.io/images/42seouler/post/058b78e0-24c3-4111-9ca7-ec29521b07cf/image.png)
